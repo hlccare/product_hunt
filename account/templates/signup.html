@@ -1,0 +1,27 @@
+{% extends "theme.html" %}
+
+{% block content %}
+
+<h2 align="center">注册</h2>
+<form method="POST" action="{% url '注册页面' %}" align="center">
+    {% csrf_token %}
+    用户名：
+    <br>
+    <input type="text" name="用户名">
+    <br>
+    {{ 错误信息 }}
+    <br>
+    密码：
+    <br>
+    <input type="password" name="密码">
+    <br>
+    确认密码：
+    <br>
+    <input type="password" name="确认密码">
+    <br>
+    {{ 密码错误信息 }}
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">注册</button>
+</form>
+{% endblock content %}
