@@ -120,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+#收集完存放在STATIC-ROOT
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#需要收集静态文件的文件夹
+STATIC_DIRS = [
+    os.path.join(BASE_DIR, 'products/static')
+]
