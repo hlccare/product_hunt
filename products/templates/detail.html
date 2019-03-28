@@ -1,10 +1,7 @@
 {% extends "theme.html" %}
 
 {% block content %}
-<div class="contianer" style="margin-left:20%;margin-top:20px;">
 <div class="row">
-    {% for product in products.all %}
-    <div class="col-md-3">
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="{{ product.icon.url }}" alt="Card image cap">
       <div class="card-body">
@@ -13,11 +10,7 @@
         <a href="products/{{ product.id }}" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
-    </div>
-    {% endfor %}
-
-
 </div>
-</div>
+
 
 {% endblock content %}

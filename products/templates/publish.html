@@ -1,0 +1,31 @@
+{% extends "theme.html" %}
+
+{% block content %}
+<h2 align="center">发布应用</h2>
+<form method="POST" action="{% url '发布页面' %}" align="center" enctype="multipart/form-data">
+    {% csrf_token %}
+    标题：
+    <br>
+    <input type="text" name="标题" value="抖音-记录美好生活">
+    <br>
+    介绍：
+    <br>
+    <textarea cols=100 rows=10 name="介绍">在此处输入介绍</textarea>
+    <br>
+    APP链接：
+    <br>
+    <input type="text" name="链接" value="http://">
+    <br>
+    小图：
+    <br>
+    <input type="file" name="小图">
+    <br>
+    大图：
+    <br>
+    <input type="file" name="大图">
+    <br>
+    {{ 错误信息 }}
+    <br>
+    <button type="submit" class="btn btn-primary">发布</button>
+</form>
+{% endblock content %}
